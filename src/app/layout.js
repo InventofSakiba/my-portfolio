@@ -2,10 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
-import Specialties from "./Components/Specialties/Specialties";
-import About from "./Components/About/About";
-import Project from "./Components/Project/Project";
-import Contact from "./Components/Contact/Contact";
+
 
 
 
@@ -33,10 +30,7 @@ export default function RootLayout({ children }) {
       >
     <Header></Header>
     <Home></Home>
-    <Specialties></Specialties>
-    <About></About>
-    <Project></Project>
-    <Contact></Contact>
+  
     
  
   
