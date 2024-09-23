@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
+
 import { AiFillInstagram } from "react-icons/ai";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
@@ -31,8 +32,8 @@ const Footer = () => {
         },
     ]
     return (
-        <section className="mt-16">
-        <Subsection title={"Contacts"} />
+        <section id="contact" className="mt-16">
+        <Subsection title={"Contact"} />
   
         <div className="mt-10 max-w-screen-lg mx-auto flex justify-center gap-6 items-center">
           {

@@ -3,17 +3,9 @@
 @tailwind utilities;
 
 
-:root {
-    --background: F9FAFF;
-   
-  }
-  
-  @media (prefers-color-scheme: gray) {
-    :root {
-      --background:F9FAFF;
-     
-    }
-  }
+html {
+  scroll-behavior: smooth;
+}
   
   
   

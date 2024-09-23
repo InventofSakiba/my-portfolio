@@ -6,8 +6,8 @@ import Btn from "../CommonComponents/Btn/Btn";
 
 const About = () => {
   return (
-    <section className="mt-16">
-      <Subsection title={"About Me me"} />
+    <section id="about" className="mt-16">
+      <Subsection title={"About Me"} />
 
       <div className="mt-14 max-w-screen-lg mx-auto flex justify-center items-center">
         {/* left */}
