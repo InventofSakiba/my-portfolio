@@ -1,67 +1,48 @@
 import Image from "next/image";
-import Link from "next/link"
-import  img from "../../../../public/icons/ux-design.png"
-import logo from "../../../../public/icons/logo.png"
+import Link from "next/link";
+import img from "../../../../public/icons/ux-design.png";
+import logo from "../../../../public/icons/logo.png";
 import html from "../../../../public/icons/html.png";
-import phone from "../../../../public/icons/phone.png"
+import phone from "../../../../public/icons/phone.png";
+import Subsection from "../CommonComponents/Subsection/Subsection";
 
 const Specialties = () => {
-    return (
-        <div>
-            <div className="w-[85%] mx-auto flex flex-col items-center">
-                <h2 className="font-bold text-[40px]">My specialties</h2>
-                <div className="w-[100px] h-[4px] bg-[#3BB4FE] rounded-sm"></div>
+  const skills = [
+    {
+      icon: img,
+      title: "ui/ux design",
+    },
+    {
+      icon: logo,
+      title: "Graphic Design",
+    },
+    {
+      icon: html,
+      title: "Web development",
+    },
+  ];
+  return (
+    <section className="mt-16">
+      <Subsection title={"My specialties"} />
+
+      <div className="mt-10 max-w-screen-lg mx-auto">
+      <div className="grid grid-cols-3">
+      {skills.map((skill, idx) => (
+          <div key={idx} className="w-full flex justify-center">
+            <div className="w-[250px] h-[200px] border bg-white shadow-md rounded">
+            <div className="w-full h-full flex flex-col gap-y-4 justify-center items-center">
+                <Image src={skill.icon} className="w-[70px] h-[70px]" alt="icons"/>
+                <p className="text-[18px] font-medium">{skill.title}</p>
+             </div>
+             
+            
             </div>
-            <div className="w-[85%] mx-auto flex mt-10 justify-between">
-
-                <div className="w-[55%] flex justify-center gap-10  grid grid-cols-3 ">
-
-                    <div className="  w-[183px] h-[149px] bg-white flex-col text-center   border border-black ">
-                    <div className=" mt-4 flex  justify-center items-center">
-                        <Image className="w-[75px] h-[75px]"  src= {img}/>
-                        </div>
-                    <p className="font-medium text-[18px]">ui/ux design</p>
-                    </div>
-                    {/*  */}
-                                 
-                    <div className="  w-[183px] h-[149px] bg-white flex-col text-center   border border-black ">
-                    <div className=" mt-4 flex  justify-center items-center">
-                        <Image className="w-[75px] h-[75px]"  src= {logo}/>
-                        </div>
-                    <p className="font-medium text-[18px]">Graphic Design</p>
-                    </div>
-                    {/*  */}
-                    
-                    <div className="  w-[183px] h-[149px] bg-white flex-col text-center   border border-black ">
-                    <div className=" mt-4 flex  justify-center items-center">
-                        <Image className="w-[75px] h-[75px]"  src= {html}/>
-                        </div>
-                    <p className="font-medium text-[18px]">Web Development</p>
-                    </div>
-                    {/*  */}
-                    
-                    <div className="  w-[183px] h-[149px] bg-white flex-col text-center   border border-black ">
-                    <div className=" mt-4 flex  justify-center items-center">
-                        <Image className="w-[75px] h-[75px]"  src= {phone}/>
-                        </div>
-                    <p className="font-medium text-[18px]">App design</p>
-                    </div>
-                    {/*  */}
-                    </div> 
-
-
-                <div className="w-[30%] ">
-                        <div className="w-[313px] h-[340px] bg-white border border-black">
-                       <p className="text-center mt-20">  SAY HELLO! <br/>
-                       inventofsakiba.me</p>
-                    <button className=" mt-3 ml-28 px-2 rounded-lg w-[80px] h-[30px] text-center bg-[#3BB4FE] text-white"><Link  href={"/"}>Click Me</Link></button>
-                        </div>
-
-                    </div>
-          
-            </div>
-        </div>
-    );
+          </div>
+        ))}
+      </div>
+      </div>
+    </section>
+  );
 };
 
 export default Specialties;
