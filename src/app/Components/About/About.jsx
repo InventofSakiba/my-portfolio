@@ -23,7 +23,7 @@ const About = () => {
             </p>
 
             <div className="flex justify-center">
-              <Btn btnTitle={"View Details"} />
+              <Link href={"#home"}><Btn btnTitle={"View Details"} /></Link>
             </div>
           </div>
         </div>

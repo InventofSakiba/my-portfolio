@@ -22,7 +22,7 @@ const Specialties = () => {
     },
   ];
   return (
-    <section className="mt-28">
+    <section id="resume" className="mt-28">
       <Subsection title={"My specialties"} />
 
       <div className="mt-10 max-w-screen-lg mx-auto">
